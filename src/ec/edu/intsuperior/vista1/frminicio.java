@@ -33,12 +33,12 @@ public class frminicio extends javax.swing.JFrame {
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         listagregar = new javax.swing.JMenuItem();
-        jMenuItem2 = new javax.swing.JMenuItem();
-        jMenuItem5 = new javax.swing.JMenuItem();
+        editadocente = new javax.swing.JMenuItem();
+        eliminadocente = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
         jMenuItem3 = new javax.swing.JMenuItem();
-        jMenuItem4 = new javax.swing.JMenuItem();
-        jMenuItem6 = new javax.swing.JMenuItem();
+        editarestudiante = new javax.swing.JMenuItem();
+        eliminarestudiante = new javax.swing.JMenuItem();
         menusalir = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
 
@@ -74,21 +74,21 @@ public class frminicio extends javax.swing.JFrame {
         });
         jMenu1.add(listagregar);
 
-        jMenuItem2.setText("Editar");
-        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+        editadocente.setText("Editar");
+        editadocente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem2ActionPerformed(evt);
+                editadocenteActionPerformed(evt);
             }
         });
-        jMenu1.add(jMenuItem2);
+        jMenu1.add(editadocente);
 
-        jMenuItem5.setText("Eliminar");
-        jMenuItem5.addActionListener(new java.awt.event.ActionListener() {
+        eliminadocente.setText("Eliminar");
+        eliminadocente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem5ActionPerformed(evt);
+                eliminadocenteActionPerformed(evt);
             }
         });
-        jMenu1.add(jMenuItem5);
+        jMenu1.add(eliminadocente);
 
         jMenuBar1.add(jMenu1);
 
@@ -103,11 +103,21 @@ public class frminicio extends javax.swing.JFrame {
         });
         jMenu2.add(jMenuItem3);
 
-        jMenuItem4.setText("Editar");
-        jMenu2.add(jMenuItem4);
+        editarestudiante.setText("Editar");
+        editarestudiante.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                editarestudianteActionPerformed(evt);
+            }
+        });
+        jMenu2.add(editarestudiante);
 
-        jMenuItem6.setText("Eliminar");
-        jMenu2.add(jMenuItem6);
+        eliminarestudiante.setText("Eliminar");
+        eliminarestudiante.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                eliminarestudianteActionPerformed(evt);
+            }
+        });
+        jMenu2.add(eliminarestudiante);
 
         jMenuBar1.add(jMenu2);
 
@@ -153,9 +163,13 @@ public class frminicio extends javax.swing.JFrame {
        verdocente.show();
     }//GEN-LAST:event_listagregarActionPerformed
 
-    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem2ActionPerformed
+    private void editadocenteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editadocenteActionPerformed
+        frmeditardocente vereditardoce = new frmeditardocente ();
+       escritorio.removeAll();
+       escritorio.repaint();
+       escritorio.add(vereditardoce);
+       vereditardoce.show();
+    }//GEN-LAST:event_editadocenteActionPerformed
 
     private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
        frmestudiante verdocente = new frmestudiante ();
@@ -169,13 +183,33 @@ public class frminicio extends javax.swing.JFrame {
   
     }//GEN-LAST:event_menusalirActionPerformed
 
-    private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem5ActionPerformed
+    private void eliminadocenteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eliminadocenteActionPerformed
+        frmeliminardocente verelitardoce = new frmeliminardocente ();
+       escritorio.removeAll();
+       escritorio.repaint();
+       escritorio.add(verelitardoce);
+       verelitardoce.show();
+    }//GEN-LAST:event_eliminadocenteActionPerformed
 
     private void jMenu1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenu1ActionPerformed
+
+    private void editarestudianteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editarestudianteActionPerformed
+         frmeditarestudiante verediest = new frmeditarestudiante ();
+       escritorio.removeAll();
+       escritorio.repaint();
+       escritorio.add(verediest );
+       verediest .show();
+    }//GEN-LAST:event_editarestudianteActionPerformed
+
+    private void eliminarestudianteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eliminarestudianteActionPerformed
+         frmeliminarestudiante vereliest = new frmeliminarestudiante ();
+       escritorio.removeAll();
+       escritorio.repaint();
+       escritorio.add(vereliest);
+       vereliest .show();
+    }//GEN-LAST:event_eliminarestudianteActionPerformed
 
     /**
      * @param args the command line arguments
@@ -183,16 +217,16 @@ public class frminicio extends javax.swing.JFrame {
    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenuItem editadocente;
+    private javax.swing.JMenuItem editarestudiante;
+    private javax.swing.JMenuItem eliminadocente;
+    private javax.swing.JMenuItem eliminarestudiante;
     private javax.swing.JDesktopPane escritorio;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
-    private javax.swing.JMenuItem jMenuItem4;
-    private javax.swing.JMenuItem jMenuItem5;
-    private javax.swing.JMenuItem jMenuItem6;
     private javax.swing.JMenuItem listagregar;
     private javax.swing.JMenu menusalir;
     // End of variables declaration//GEN-END:variables
